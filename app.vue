@@ -20,7 +20,9 @@ onMounted(() => {
 
 useHead({
   title: "Portfolio",
-  lang: "en",
+  htmlAttrs: {
+    lang: "en",
+  },
   meta: [
     {
       name: "description",
