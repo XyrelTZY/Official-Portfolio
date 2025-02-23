@@ -3,8 +3,11 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "moduleResolution": "node",
+    "baseUrl": ".",
     "paths": {
-      "lucide-vue-next": ["node_modules/lucide-vue-next"]
-    }
+      "lucide-vue-next": ["./node_modules/lucide-vue-next"]
+    },
+    "target": "ES6",
+    "module": "ES6"
   }
 }
