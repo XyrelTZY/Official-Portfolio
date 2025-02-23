@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: cursive !important;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

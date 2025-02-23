@@ -80,6 +80,7 @@
             id="AnimationTopToBottom"
             target="_blank"
             class="hover:text-green-600 transform hover:scale-110 transition-all duration-300"
+            aria-label="GitHub"
           >
             <svg
               class="w-7 h-7 text-[#E2E8F0]"
@@ -97,6 +98,7 @@
             id="AnimationTopToBottom"
             target="_blank"
             class="text-gray-600 hover:text-green-600 transform hover:scale-110 transition-all duration-300"
+            aria-label="LinkedIn"
           >
             <svg
               class="w-7 h-7 text-blue-500 mt-1"
@@ -114,6 +116,7 @@
             id="AnimationTopToBottom"
             target="_blank"
             class="text-gray-600 hover:text-green-600 transform hover:scale-110 transition-all duration-300"
+            aria-label="Facebook"
           >
             <svg
               class="w-7 h-7 text-blue-500"
@@ -162,7 +165,7 @@
           ></div>
 
           <!-- Frontend Skills -->
-          <div class="skill-card reveal-item">
+          <div class="skill-card reveal-item !bg-gray-600 rounded-md">
             <div
               class="relative z-10 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
@@ -216,7 +219,7 @@
           </div>
 
           <!-- Backend Skills -->
-          <div class="skill-card reveal-item delay-200">
+          <div class="skill-card reveal-item delay-200 !bg-gray-600 rounded-md">
             <div
               class="relative z-10 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
@@ -268,7 +271,7 @@
           </div>
 
           <!-- Tools & Others -->
-          <div class="skill-card reveal-item delay-400">
+          <div class="skill-card reveal-item delay-400 !bg-gray-600 rounded-md">
             <div
               class="relative z-10 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
@@ -465,25 +468,6 @@ const ApplicationForm = () => {
   }
   to {
     width: 100%;
-  }
-}
-
-.typing-text {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 0.15em solid #e2e8f0;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  width: auto; /* Ensure the width is only as wide as the text content */
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #e2e8f0;
   }
 }
 

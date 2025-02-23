@@ -20,6 +20,7 @@ onMounted(() => {
 
 useHead({
   title: "Portfolio",
+  lang: "en",
   meta: [
     {
       name: "description",
@@ -31,14 +32,11 @@ useHead({
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
 div {
-  /* font-family: "Roboto", serif; */
+  font-family: "Times New Roman", Times, serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  font-family: "Pacifico", cursive, "Dancing Script", sans-serif;
 }
 :root {
   --neon-green: #39ff14;
