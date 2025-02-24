@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen overflow-x-hidden">
     <!-- Detailed Description -->
     <div
       class="rounded-xl p-8 mb-12 flex flex-col lg:flex-row md:flex-row gap-10"
@@ -8,7 +8,7 @@
         <img
           src="../assets/images/Xyrel.jpg"
           alt="XyrelTzy"
-          class="-mb-10 h-72 w-96 lg:w-auto md:w-auto lg:h-auto md:h-auto lg:w-auto md:w-auto lg:mb-0 md:mb-0 object-cover transform transition-transform duration-300 rounded-full animate-profile-move border-2 border-green-500"
+          class="-mb-10 h-72 lg:w-auto md:w-auto lg:h-auto md:h-auto lg:w-auto md:w-auto lg:mb-0 md:mb-0 object-cover transform transition-transform duration-300 rounded-full animate-profile-move border-2 border-green-500"
         />
       </div>
       <div

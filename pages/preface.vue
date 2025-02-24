@@ -122,7 +122,7 @@
             />
           </svg>
         </button>
-        <span class="px-5 text-center w-24 py-2 text-gray-600 rounded-lg"
+        <span class="px-5 text-center w-24 py-2 text-[#e2e8f0] rounded-lg"
           >{{ currentActivity }} / 12</span
         >
         <button @click="scrollToNext" :disabled="currentActivity === 12">
@@ -148,7 +148,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import School from "../assets/images/SchoolLogo.png";
+import School from "../assets/images/ZSNHSLogo.png";
 
 const currentActivity = ref(1);
 const activities = ref([
