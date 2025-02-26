@@ -83,7 +83,7 @@
             id="AnimationTopToBottom"
             class="lg:hidden md:hidden px-6 py-2 lg:px-8 lg:py-3 border-2 border-green-600 text-green-400 rounded-lg transition-colors duration-300 transform text-sm lg:text-base"
           >
-            EndorsementLetter
+            Endorsement Letter
           </button>
         </div>
 
