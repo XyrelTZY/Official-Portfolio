@@ -39,7 +39,7 @@
               class="min-w-[170px] px-8 py-2 rounded-lg hidden lg:block md:block transition-colors duration-300 transform focus:outline-none text-[#E2E8F0] bg-gray-800 border-[1.px] border-gray-400 items-center justify-center space-x-2"
               :class="{ 'bg-gray-500 text-[#E2E8F0]': currentActivity === i }"
             >
-              <span class="text-sm">Activity {{ i }}</span>
+              <span class="text-sm">Day {{ i }}</span>
             </button>
           </div>
 
@@ -83,21 +83,49 @@
           <div class="w-full md:w-1/2 group transition-transform duration-300">
             <div class="rounded-xl shadow-lg overflow-hidden">
               <img
-                :src="activity?.image"
+                :src="activity?.Image"
                 :alt="`Activity ${index + 1}`"
-                class="w-full h-64 object-cover transition-transform duration-300"
+                class="w-full h-64 object-cover transition-transform duration-300 cursor-pointer"
+                @click="openModal(activity)"
               />
               <div class="p-6">
                 <h3 class="text-2xl font-semibold text-[#E2E8F0] mb-3">
-                  Activity {{ index + 1 }}
+                  Day {{ index + 1 }}
                 </h3>
-                <p class="text-[#E2E8F0] leading-relaxed">
-                  {{ activity.description }}
+                <p class="text-[#E2E8F0] leading-relaxed text-justify">
+                  {{ activity.Description }}
                 </p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      v-if="isModalOpen"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 overflow-y-auto"
+    >
+      <div
+        class="bg-gray-700 p-4 rounded-lg max-w-lg w-full relative overflow-y-auto max-h-[80vh] mt-10"
+      >
+        <button
+          @click="closeModal"
+          class="absolute top-2 right-2 text-white z-50"
+        >
+          <X />
+        </button>
+        <div class="flex justify-center items-center">
+          <img
+            :src="modalImage?.Image"
+            :alt="modalImage?.Description"
+            class="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+          />
+        </div>
+        <p class="mt-4 text-gray-300 text-justify">
+          {{ modalImage?.Description }}
+        </p>
       </div>
     </div>
 
@@ -147,23 +175,53 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { X } from "lucide-vue-next";
 import School from "../assets/images/ZSNHSLogo.png";
+import Day1 from "./assets/images/Day1.jpg";
 
 const currentActivity = ref(1);
 const activities = ref([
-  { image: School, description: "Activity 1 Description" },
-  { image: School, description: "Activity 2 Description" },
-  { image: School, description: "Activity 3 Description" },
-  { image: School, description: "Activity 4 Description" },
-  { image: School, description: "Activity 5 Description" },
-  { image: School, description: "Activity 6 Description" },
-  { image: School, description: "Activity 7 Description" },
-  { image: School, description: "Activity 8 Description" },
-  { image: School, description: "Activity 9 Description" },
-  { image: School, description: "Activity 10 Description" },
-  { image: School, description: "Activity 11 Description" },
-  { image: School, description: "Activity 12 Description" },
+  {
+    Image: Day1,
+    Description:
+      "February 26 the day of our first day of immersion and began when we left school around 8 AM, heading to the Barangay Lumbia for our immersion program. The morning air was cool as we rode motorcycles through the streets, eager for the tasks ahead. Upon arrival, the Barangay secretary greeted us and gave a brief orientation about our responsibilities and goals. She outlined the areas where we would assist, explaining the different departments and our specific roles.\n\nAfter the orientation, we were assigned tasks, each of us focusing on a specific area. The secretary emphasized the importance of teamwork and contributing meaningfully to the community.\n\nBy nearly 4 PM, we were ready for our first physical task. We gathered cleaning supplies and went to the second floor of the Barangay building, which hadn't been cleaned in a while. We got to work, sweeping. Working together, the space quickly became cleaner and more organized.\n\nOnce the cleaning was done, we signed out, marking the completion of our task for the day. It felt rewarding to see the immediate results of our efforts, and we left with a sense of pride in our contribution.",
+  },
+  {
+    Image: School,
+    Description: "Day 2 Description",
+  },
+  {
+    Image: School,
+    Description: "Day 3 Description",
+  },
+  {
+    Image: School,
+    Description: "Day 4 Description",
+  },
+  {
+    Image: School,
+    Description: "Day 5 Description",
+  },
+  {
+    Image: School,
+    Description: "Day 6 Description",
+  },
+  {
+    Image: School,
+    Description: "Day 7 Description",
+  },
+  {
+    Image: School,
+    Description: "Day 8 Description",
+  },
+  {
+    Image: School,
+    Description: "Day 9 Description",
+  },
+  {
+    Image: School,
+    Description: "Day 10 Description",
+  },
 ]);
 
 const activitiesPerPage = 6;
@@ -215,6 +273,19 @@ const scrollToNext = () => {
   if (currentActivity.value < 12) {
     scrollToActivity(currentActivity.value + 1);
   }
+};
+
+const isModalOpen = ref(false);
+const modalImage = ref(null);
+
+const openModal = (activity) => {
+  modalImage.value = activity;
+  isModalOpen.value = true;
+};
+
+const closeModal = () => {
+  isModalOpen.value = false;
+  modalImage.value = null;
 };
 </script>
 
@@ -297,5 +368,12 @@ html {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* Center the modal */
+.fixed.inset-0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

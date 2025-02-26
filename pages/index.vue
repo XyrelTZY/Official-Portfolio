@@ -20,7 +20,7 @@
           class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-green-400 lg:whitespace-nowrap"
           id="AnimationLeftToRight"
         >
-          Hi,<span class="text-[#E2E8F0] ml-1">I am Xyrel D. Tenefrancia</span>
+          Hi, <span class="text-[#E2E8F0] ml-1">I am Xyrel D. Tenefrancia</span>
         </h1>
         <h1
           class="text-base lg:text-3xl text-green-500 mt-4 !text-green-400 overflow-hidden whitespace-nowrap"
@@ -70,6 +70,20 @@
             class="lg:hidden md:hidden px-6 py-2 lg:px-8 lg:py-3 border-2 border-green-600 text-green-400 rounded-lg transition-colors duration-300 transform text-sm lg:text-base"
           >
             Application Form
+          </button>
+          <button
+            @click="RequestForm"
+            id="AnimationTopToBottom"
+            class="lg:hidden md:hidden px-6 py-2 lg:px-8 lg:py-3 border-2 border-green-600 text-green-400 rounded-lg transition-colors duration-300 transform text-sm lg:text-base"
+          >
+            Request Form
+          </button>
+          <button
+            @click="EndorsementLetter"
+            id="AnimationTopToBottom"
+            class="lg:hidden md:hidden px-6 py-2 lg:px-8 lg:py-3 border-2 border-green-600 text-green-400 rounded-lg transition-colors duration-300 transform text-sm lg:text-base"
+          >
+            EndorsementLetter
           </button>
         </div>
 
@@ -414,6 +428,14 @@ const RedirectToResume = () => {
 
 const ApplicationForm = () => {
   window.open("/applicationform/ApplicationForm.pdf", "_blank");
+};
+
+const RequestForm = () => {
+  window.open("/requestform/RequestForm.docx");
+};
+
+const EndorsementLetter = () => {
+  window.open("/endorsementletter/EndorsementLetter.docx");
 };
 </script>
 

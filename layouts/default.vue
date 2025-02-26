@@ -19,9 +19,9 @@
               class="w-12 h-12 transition-transform duration-300 group-hover:scale-110"
             />
             <span
-              class="text-2xl !text-green-400 bg-clip-text text-transparent"
+              class="text-2xl !text-green-400 bg-clip-text text-transparent whitespace-nowrap"
             >
-              Portfolio
+              Work Immersion
             </span>
           </NuxtLink>
 
@@ -37,25 +37,41 @@
               :class="{ 'text-green-400': isActive(link.to) }"
             >
               <span class="relative z-10">{{ link.text }}</span>
-              <!-- Add pseudo-elements here -->
               <span
                 class="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-500 transform scale-x-0 transition-transform duration-300"
                 :class="{ 'scale-x-100': isActive(link.to) }"
               ></span>
             </NuxtLink>
           </nav>
-          <a
-            href="/applicationform/ApplicationForm.pdf"
-            target="_blank"
-            class="px-6 py-2 w-38 rounded-full invisible lg:visible md:visible bg-gradient-to-r from-emerald-500 to-green-500 text-white hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300"
-          >
-            Application Form
-          </a>
+          <!-- Action Buttons -->
+          <div class="hidden md:flex items-center space-x-4">
+            <NuxtLink
+              to="/applicationform/ApplicationForm.docx"
+              target="_blank"
+              class="px-6 py-2 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-white hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300"
+            >
+              Application Form
+            </NuxtLink>
+            <NuxtLink
+              to="/requestform/RequestForm.docx"
+              target="_blank"
+              class="px-6 py-2 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-white hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300"
+            >
+              Request Form
+            </NuxtLink>
+            <NuxtLink
+              to="/endorsementletter/EndorsementLetter.docx"
+              target="_blank"
+              class="px-6 py-2 rounded-full bg-gradient-to-r from-emerald-500 to-green-500 text-white hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300"
+            >
+              Endorsement Letter
+            </NuxtLink>
+          </div>
 
           <!-- Mobile Menu Button -->
           <button
             @click="toggleMenu"
-            class="md:invisible relative w-10 h-10 focus:outline-none"
+            class="md:hidden relative w-10 h-10 focus:outline-none"
             aria-label="Toggle Menu"
           >
             <div
@@ -144,8 +160,7 @@
 </template>
 
 <script setup lang="ts">
-import Footer from "../components/footer.vue";
-import { Home, Info, BookOpen } from "lucide-vue-next";
+import { Home, Info, BookOpen, Award } from "lucide-vue-next";
 
 const route = useRoute();
 const isScrolled = ref(false);
@@ -154,13 +169,15 @@ const isMenuOpen = ref(false);
 const navLinks = [
   { to: "/", text: "Home" },
   { to: "/about", text: "About" },
-  { to: "/preface", text: "Preface" },
+  { to: "/portfolioentry", text: "Portfolio Entry" },
+  { to: "/certificates", text: "Certificates" },
 ];
 
 const mobileLinks = [
   { to: "/", text: "Home", icon: Home },
   { to: "/about", text: "About", icon: Info },
-  { to: "/preface", text: "Preface", icon: BookOpen },
+  { to: "/portfolioentry", text: "Portfolio Entry", icon: BookOpen },
+  { to: "/certificates", text: "Certificates", icon: Award },
 ];
 
 const isActive = (path: any) => route.path === path;
