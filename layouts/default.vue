@@ -154,13 +154,10 @@
     >
       <slot />
     </main>
-
-    <Footer />
   </div>
 </template>
 
 <script setup lang="ts">
-import Footer from "../components/Footer.vue";
 import { Home, Info, BookOpen, Award } from "lucide-vue-next";
 
 const route = useRoute();

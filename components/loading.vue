@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div class="loader"></div>
+    <div class="loader">
+      <div class="box" v-for="n in 4" :key="n"></div>
+    </div>
     <div class="loading-text">{{ loadingText }}</div>
   </div>
 </template>
@@ -26,55 +28,41 @@ onMounted(() => {
   height: 100vh;
 }
 .loader {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  perspective: 1000px;
+}
+.box {
   width: 20px;
-  height: 80px;
+  height: 20px;
   background: #935936;
-  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 1.5s infinite linear;
 }
-.loader:before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: -22px;
-  width: 25px;
-  height: 60px;
-  background: radial-gradient(farthest-side, #fff 92%, #0000) 60% 6px/4px 4px,
-    radial-gradient(50% 60%, #53707b 92%, #0000) center/70% 55%,
-    radial-gradient(farthest-side, #53707b 92%, #0000) 50% 3px/14px 14px,
-    radial-gradient(142% 100% at bottom right, #0000 64%, #53707b 65%)
-      bottom/57% 40%,
-    conic-gradient(from -120deg at right, #53707b 36deg, #0000 0) 100% 3px/51%
-      12px,
-    conic-gradient(
-        from 120deg at top left,
-        #0000,
-        #ef524a 2deg 40deg,
-        #0000 43deg
-      )
-      top/100% 10px;
-  background-repeat: no-repeat;
-  transform: rotate(-26deg);
-  transform-origin: 100% 80%;
-  animation: l16 0.2s infinite linear alternate;
+.box:nth-child(1) {
+  animation-delay: 0s;
 }
-.loader:after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 12px;
-  left: -6px;
-  bottom: 15px;
-  border-radius: 100px 0 0 100px;
-  background: #53707b;
+.box:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.box:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.box:nth-child(4) {
+  animation-delay: 0.9s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
 }
 .loading-text {
   margin-top: 20px;
   font-size: 1.2em;
   color: #34d399;
-}
-@keyframes l16 {
-  100% {
-    transform: rotate(0);
-  }
 }
 </style>
