@@ -178,17 +178,19 @@
 import { X } from "lucide-vue-next";
 import School from "../assets/images/ZSNHSLogo.png";
 import Day1 from "./assets/images/Day1.jpg";
+import Day2 from "./assets/images/Day2.jpg";
 
 const currentActivity = ref(1);
 const activities = ref([
   {
     Image: Day1,
     Description:
-      "February 26 the day of our first day of immersion and began when we left school around 8 AM, heading to the Barangay Lumbia for our immersion program. The morning air was cool as we rode motorcycles through the streets, eager for the tasks ahead. Upon arrival, the Barangay secretary greeted us and gave a brief orientation about our responsibilities and goals. She outlined the areas where we would assist, explaining the different departments and our specific roles.\n\nAfter the orientation, we were assigned tasks, each of us focusing on a specific area. The secretary emphasized the importance of teamwork and contributing meaningfully to the community.\n\nBy nearly 4 PM, we were ready for our first physical task. We gathered cleaning supplies and went to the second floor of the Barangay building, which hadn't been cleaned in a while. We got to work, sweeping. Working together, the space quickly became cleaner and more organized.\n\nOnce the cleaning was done, we signed out, marking the completion of our task for the day. It felt rewarding to see the immediate results of our efforts, and we left with a sense of pride in our contribution.",
+      "February 26 our first day of immersion and began when we left school around 8 AM, heading to the Barangay Lumbia for our immersion program. The morning air was cool as we rode motorcycles through the streets, eager for the tasks ahead. Upon arrival, the Barangay secretary greeted us and gave a brief orientation about our responsibilities and goals. She outlined the areas where we would assist, explaining the different departments and our specific roles.\n\nAfter the orientation, we were assigned tasks, each of us focusing on a specific area. The secretary emphasized the importance of teamwork and contributing meaningfully to the community.\n\nBy nearly 4 PM, we were ready for our first physical task. We gathered cleaning supplies and went to the second floor of the Barangay building, which hadn't been cleaned in a while. We got to work, sweeping. Working together, the space quickly became cleaner and more organized.\n\nOnce the cleaning was done, we signed out, marking the completion of our task for the day. It felt rewarding to see the immediate results of our efforts, and we left with a sense of pride in our contribution.",
   },
   {
-    Image: School,
-    Description: "Day 2 Description",
+    Image: Day2,
+    Description:
+      "We visited our assigned area, the SLP Store Barangay Assembly located in Fisher Ville. Our first task was to organize the store. We worked together to sort through the items, ensuring everything was in its proper place. Although it was a easy task, we worked efficiently and successfully completed it. Sometimes we got bored because the tasks weren't many. Overall, it was a fulfilling day, and we felt a strong sense of accomplishment and pride in our contributions to SLP.",
   },
   {
     Image: School,
