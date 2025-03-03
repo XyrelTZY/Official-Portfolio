@@ -194,7 +194,8 @@ const activities = ref([
   },
   {
     Image: School,
-    Description: "Day 3 Description",
+    Description:
+      "Day 3 was similar to our previous days. In the morning, we were tasked with cleaning trash on the court. We worked together to ensure the area was spotless. However, in the afternoon, we had nothing to do and just sat around because the owner of the store had yet to order us to clean. It was a relatively uneventful day, but we remained ready to assist whenever needed.",
   },
   {
     Image: School,
