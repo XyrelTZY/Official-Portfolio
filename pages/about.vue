@@ -4,13 +4,16 @@
     <div
       class="rounded-xl p-8 mb-12 flex flex-col lg:flex-row md:flex-row gap-10"
     >
-      <div class="flex justify-center mb-6" id="AnimationTopToBottom">
-        <img
-          src="../assets/images/Xyrel.jpg"
-          alt="XyrelTzy"
-          class="-mb-10 h-72 lg:w-auto md:w-auto lg:h-auto md:h-auto lg:w-auto md:w-auto lg:mb-0 md:mb-0 object-cover transform transition-transform duration-300 rounded-full animate-profile-move border-2 border-green-500"
-        />
-      </div>
+        <div class="flex justify-center flex-col gap-2 mb-6" id="AnimationTopToBottom">
+            <img src="../assets/images/Xyrel.jpg"
+                 alt="XyrelTzy"
+                 class="-mb-10 h-72 lg:w-auto md:w-auto lg:h-auto md:h-auto lg:w-auto md:w-auto lg:mb-0 md:mb-0 object-cover transform transition-transform duration-300 rounded-full animate-profile-move border-2 border-green-500" />
+            <NuxtLink to="/StudentInfo/StudentInfo.docx"
+                      target="_blank"
+                      class="px-6 py-2 mt-10 lg:mt-0 md:mt-0 rounded-full bg-gradient-to-r text-center from-emerald-500 to-green-500 text-white hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300">
+                Personal Information
+            </NuxtLink>
+        </div>
       <div
         class="prose dark:prose-invert max-w-none text-justify"
         id="AnimationRightToLeft"

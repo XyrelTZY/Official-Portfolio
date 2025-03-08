@@ -179,6 +179,12 @@ import { X } from "lucide-vue-next";
 import School from "../assets/images/ZSNHSLogo.png";
 import Day1 from "./assets/images/Day1.jpg";
 import Day2 from "./assets/images/Day2.jpg";
+import Day3 from "./assets/images/Day3.jpg";
+import Day4 from "./assets/images/Day4.jpg";
+import Day5 from "./assets/images/Day5.jpg";
+import Day6 from "./assets/images/Day6.jpg";
+import Day7 from "./assets/images/Day7.jpg";
+
 
 const currentActivity = ref(1);
 const activities = ref([
@@ -193,25 +199,25 @@ const activities = ref([
       "We visited our assigned area, the SLP Store Barangay Assembly located in Fisher Ville. Our first task was to organize the store. We worked together to sort through the items, ensuring everything was in its proper place. Although it was a easy task, we worked efficiently and successfully completed it. Sometimes we got bored because the tasks weren't many. Overall, it was a fulfilling day, and we felt a strong sense of accomplishment and pride in our contributions to SLP.",
   },
   {
-    Image: School,
+    Image: Day3,
     Description:
-      "Day 3 was similar to our previous days. In the morning, we were tasked with cleaning trash on the court. We worked together to ensure the area was spotless. However, in the afternoon, we had nothing to do and just sat around because the owner of the store had yet to order us to clean. It was a relatively uneventful day, but we remained ready to assist whenever needed.",
+      "Day 3 was similar to our previous days. In the morning, we were tasked with cleaning trash on the backyard. We worked together to ensure the area was spotless. However, in the afternoon, we had nothing to do and just sat around because the owner of the store had yet to order us to clean. It was a relatively uneventful day, but we remained ready to assist whenever needed.",
   },
   {
-    Image: School,
-    Description: "Day 4 Description",
+    Image: Day4,
+    Description: "On March 4, our fourth day of immersion, we began by visiting the barangay secretary to request a transfer to the daycare center located beside SMC Main. After securing permission, we proceeded to the daycare and introduced ourselves to the teacher in charge. Initially, we were unsure of our tasks as the teacher had not yet assigned us specific responsibilities. This gave us time to observe the environment and interact with the children, which was both heartwarming and enlightening. In the afternoon, the teacher finally gave us our first task: cleaning the outside area and the backyard of the daycare.While it was physically demanding, it felt rewarding to contribute to maintaining a clean and safe space for the children.After completing the task, we took a group photo with the teacher as part of our sign- out process.This day taught me the importance of adaptability, patience, and teamwork, as we navigated through uncertainty and worked together to fulfill our responsibilities.It also highlighted the value of community service and the impact of small actions in creating a positive environment for others.",
   },
   {
-    Image: School,
-    Description: "Day 5 Description",
+    Image: Day5,
+    Description: "On the fifth day of our immersion, the teacher assigned us a more interactive and engaging task: leading and teaching the children. This was a meaningful experience as we had the opportunity to connect with the kids on a deeper level. We sang songs like Baby Shark and other fun, educational tunes, which brought joy to the children and created a lively atmosphere. Seeing their smiles and enthusiasm was incredibly rewarding and reminded me of the importance of creativity and energy when working with young learners. In the afternoon, the teacher tasked us with planting and watering plants.While it was a different kind of responsibility compared to the morning, it was equally fulfilling.This activity taught me the value of caring for the environment and contributing to the upkeep of the daycare’s surroundings.It also reinforced the idea that every task, no matter how small, plays a part in creating a nurturing space for the children. Overall, Day 5 was a blend of fun, responsibility, and learning.It highlighted the importance of adaptability, teamwork, and the joy of serving others, whether through teaching, singing, or caring for the environment.This day deepened my appreciation for the role of educators and community workers in shaping a positive and supportive environment for children.",
   },
   {
-    Image: School,
-    Description: "Day 6 Description",
+    Image: Day6,
+      Description: "On March 6, our sixth day of immersion, we temporarily transferred to the health center as the daycare teacher had a meeting or event to attend. This change of location allowed us to experience a different aspect of community service. Upon arriving at the Lumbia Health Center, we immediately began our tasks, which primarily involved cleaning the floors and mapping. These activities, though seemingly simple, were essential in maintaining a clean and organized environment for the health center’s staff and visitors. In the afternoon, we continued with cleaning and mapping, ensuring that the health center remained orderly and functional.While the work was repetitive, it taught me the importance of diligence and attention to detail, especially in a setting where cleanliness and organization are crucial for health and safety. This day highlighted the value of flexibility and adaptability, as we seamlessly transitioned from the daycare to the health center.It also reinforced the idea that every role, no matter how small, contributes to the overall functioning of a community.Serving at the health center gave me a deeper appreciation for the hard work and dedication of healthcare workers and support staff who ensure that these facilities run smoothly.Overall, it was a humbling and insightful experience.",
   },
   {
-    Image: School,
-    Description: "Day 7 Description",
+    Image: Day7,
+      Description: "Todays immersion activity was all about teamwork, responsibility, and maintaining cleanliness. Our tasks included cleaning cabinets, transferring the plate holder, wiping plates with rugs, and cleaning leaves outside. At first, these tasks seemed simple, but I quickly realized the importance of organization and attention to detail. While cleaning the cabinet, I saw how proper arrangement helps maintain order.Transferring the plate holder required coordination, reminding me that even small tasks require teamwork.Cleaning the plates and using rugs taught me patience and the value of keeping things neat.Finally, sweeping the leaves outside made me appreciate the effort needed to maintain a clean and pleasant environment. Overall, today’s experience reinforced the importance of cleanliness and discipline.It may not have been a technical task, but it showed me that every responsibility, no matter how small, contributes to a better workplace.",
   },
   {
     Image: School,
